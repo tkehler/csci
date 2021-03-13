@@ -2,7 +2,13 @@
 <html lang="en">
 <head>
   <title>CSEmbeddedApp</title>
-  <style>
+  
+</head>
+<body>
+  <h1>CrowdSmart Platform</h1>
+
+  <img src="CSPlatform.png" alt="CrowdSmart" width="1000" height="600">
+<style>
   #crowdsmart-embed-app {
     background: transparent;
     border: none;
@@ -14,12 +20,21 @@
     width: 420px;
   }
 </style>
-</head>
-<body>
-  <h1>CrowdSmart Platform</h1>
-
-  <img src="CSPlatform.png" alt="CrowdSmart" width="800" height="600">
-
-  <script>(()=>{const e=document.createElement("script");e.src="https://cdn.jsdelivr.net/npm/iframe-resizer@4.2.11/js/iframeResizer.min.js",document.body.appendChild(e),e.addEventListener("load",function(){const e=document.createElement("iframe");e.id="crowdsmart-embed-app",e.src="https://embed.crowdsmart.ai/evaluation/csinnovator/3d2d7fd2-7130-11eb-ba21-0a72d1dc96e5/38094764-7132-11eb-86db-0a72d1dc96e5",document.body.appendChild(e),e.addEventListener("load",function(){iFrameResize({},"#crowdsmart-embed-app")})})})();</script>
+ <script>
+  (() => {
+    const resizer = document.createElement('script')
+    resizer.src = 'https://cdn.jsdelivr.net/npm/iframe-resizer@4.2.11/js/iframeResizer.min.js'
+    document.body.appendChild(resizer)
+    resizer.addEventListener('load', function () {
+      const iframe = document.createElement('iframe')
+      iframe.id = 'crowdsmart-embed-app'
+      iframe.src = 'https://www.crowdsmart.ai/embed/evaluation/csinnovator/630b5b60-8414-11eb-8dd5-0a72d1dc96e5/8458d610-8416-11eb-9880-0a72d1dc96e5'
+      document.body.appendChild(iframe)
+      iframe.addEventListener('load', function () {
+        iFrameResize({}, '#crowdsmart-embed-app')
+      })
+    })
+  })()
+</script>
   </body>
 </html>
